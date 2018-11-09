@@ -15,7 +15,7 @@ module.exports.pitch = function (remainingRequest) {
   var chunkName;
   if (query.name || defaultQueryName) {
     chunkName = loaderUtils.interpolateName(this, query.name || defaultQueryName, {
-      context: query.context || this.options.context,
+      context:  this.context,
       content: remainingRequest,
     });
   }
